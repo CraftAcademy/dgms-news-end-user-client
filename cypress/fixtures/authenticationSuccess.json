@@ -1,0 +1,9 @@
+{
+  "data": {
+    "id": 47,
+    "provider": "email",
+    "uid": "user@email",
+    "allow_password_change": false,
+    "email": "user@email"
+  }
+}
