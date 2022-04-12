@@ -18,9 +18,12 @@ describe('user can see a collection of articles', () => {
   })
 
   it('is expected that the first title will be Sports and Business', () => {
-    cy.get('[data-cy=articles-list]')
+    cy.get("[data-cy=articles-list]")
       .first()
-      .should('contain.text', 'Sports 1 Sports 2 Sports 3 Business 1 Business 2 Business 3')
+      .should(
+        "contain.text",
+        "Business 1 Business 2 Business 3 Sports 1 Sports 2 Sports 3"
+      );
   })
 
   it('is expected that the last title will be Business 3', () => {
