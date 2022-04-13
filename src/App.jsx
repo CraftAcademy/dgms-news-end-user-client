@@ -8,11 +8,13 @@ import Footer from './Components/Footer.jsx'
 import Login from './Components/Login.jsx'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Location from './Components/Location.jsx'
 
 const App = () => {
 
   return (
     <>
+<Location />
       <NavBar />
       <Routes>
         <Route path="/" element={<Articles />} />
@@ -20,6 +22,7 @@ const App = () => {
         <Route path="/:category" element={<ArticleGroup />} />
         <Route path="/login" element={<Login toast={toast}/>} />
       </Routes>
+      
       <div
         style={{
           position: 'fixed',
