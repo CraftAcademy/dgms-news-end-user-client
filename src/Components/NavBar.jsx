@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 
 const NavBar = () => {
   const { userAuthenticated } = useSelector((state) => state)
+  const { userCountry } = useSelector((state) => state)
 
   return (
     <Segment inverted>
@@ -36,7 +37,11 @@ const NavBar = () => {
           />
         )) || (<Menu.Item data-cy="logged-button" name="Logged in" />)}
       </Menu>
+      <Menu.Item 
+      />
+      <div data-cy="user-location">User location - {userCountry}</div>
     </Segment>
+    
   )
 }
 

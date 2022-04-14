@@ -10,6 +10,11 @@ const rootReducer = (state, action) => {
         ...state,
         activeArticle: action.payload,
       }
+      case 'SET_USER_COUNTRY':
+        return {
+          ...state,
+          userCountry: action.payload,
+        }
 
     case 'SET_USER_AUTHENTICATED':
       return {

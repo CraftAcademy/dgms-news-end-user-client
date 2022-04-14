@@ -36,9 +36,9 @@ const Login = ({ toast }) => {
           <Form.Field
             name="email"
             data-cy="login-email"
-            placeholder="Email"
+            placeholder="your@emails"
             control={Input}
-            label="emai"
+            label="Email"
           />
           <Form.Field
             name="password"
