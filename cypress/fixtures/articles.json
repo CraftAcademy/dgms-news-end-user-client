@@ -1,14 +1,14 @@
 {
   "articles": {
     "business": [
-      {"id": 1, "title": "Business 1", "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidata", "image": "https://www.calnewport.com/wp-content/uploads/2015/11/deep-work-cal-newport.jpg" },
-      {"id": 2, "title": "Business 2", "body": "Business 2 body", "image": "https://s1.adlibris.com/images/32425586/the-mind-of-the-leader.jpg"},
-      {"id": 3, "title": "Business 3", "body": "Business 3 body", "image": "https://upload.wikimedia.org/wikipedia/en/0/03/Cover_Good_2_Gr8.jpg" }
+      {"id": 1, "title": "Business 1", "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidata", "image": "https://www.calnewport.com/wp-content/uploads/2015/11/deep-work-cal-newport.jpg", "country": "Sweden" },
+      {"id": 2, "title": "Business 2", "body": "Business 2 body", "image": "https://s1.adlibris.com/images/32425586/the-mind-of-the-leader.jpg","country": "Sweden"},
+      {"id": 3, "title": "Business 3", "body": "Business 3 body", "image": "https://upload.wikimedia.org/wikipedia/en/0/03/Cover_Good_2_Gr8.jpg","country": "Denmark" }
     ],
     "sports": [
-      {"id": 4, "title": "Sports 1", "body": "Sports 1 body", "image": "https://images.livemint.com/img/2022/01/19/600x338/sania_mirza_1642583928141_1642583928267.jpg"},
-      {"id": 5, "title": "Sports 2", "body": "Sports 2 body", "image": "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg"},
-      {"id": 6, "title": "Sports 3", "body": "Sports 3 body", "image": "https://cdn.newsapi.com.au/image/v1/31c0b689d5ee19fcab006523b02d878b?width=320"}
+      {"id": 4, "title": "Sports 1", "body": "Sports 1 body", "image": "https://images.livemint.com/img/2022/01/19/600x338/sania_mirza_1642583928141_1642583928267.jpg","country": "Sweden"},
+      {"id": 5, "title": "Sports 2", "body": "Sports 2 body", "image": "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg","country": "Denmark"},
+      {"id": 6, "title": "Sports 3", "body": "Sports 3 body", "image": "https://cdn.newsapi.com.au/image/v1/31c0b689d5ee19fcab006523b02d878b?width=320","country": "Norway"}
     ]
   }
 }
