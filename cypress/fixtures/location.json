@@ -1,0 +1,146 @@
+{
+    "documentation": "https://opencagedata.com/api",
+    "licenses": [
+      {
+        "name": "see attribution guide",
+        "url": "https://opencagedata.com/credits"
+      }
+    ],
+    "rate": {
+      "limit": 2500,
+      "remaining": 2473,
+      "reset": 1646870400
+    },
+    "results": [
+      {
+        "annotations": {
+          "DMS": {
+            "lat": "57° 43' 50.82744'' N",
+            "lng": "11° 59' 0.33396'' E"
+          },
+          "MGRS": "32VPK7763502650",
+          "Maidenhead": "JO57xr85aj",
+          "Mercator": {
+            "x": 1333988.894,
+            "y": 7874814.574
+          },
+          "OSM": {
+            "edit_url": "https://www.openstreetmap.org/edit?way=1022912202#map=16/57.73079/11.98343",
+            "note_url": "https://www.openstreetmap.org/note/new#map=16/57.73079/11.98343&layers=N",
+            "url": "https://www.openstreetmap.org/?mlat=57.73079&mlon=11.98343#map=16/57.73079/11.98343"
+          },
+          "UN_M49": {
+            "regions": {
+              "EUROPE": "150",
+              "NORTHERN_EUROPE": "154",
+              "SE": "752",
+              "WORLD": "001"
+            },
+            "statistical_groupings": [
+              "MEDC"
+            ]
+          },
+          "callingcode": 46,
+          "currency": {
+            "alternate_symbols": [
+              ":-"
+            ],
+            "decimal_mark": ",",
+            "disambiguate_symbol": "SEK",
+            "format": "%n %u",
+            "html_entity": "",
+            "iso_code": "SEK",
+            "iso_numeric": "752",
+            "name": "Swedish Krona",
+            "smallest_denomination": 100,
+            "subunit": "Öre",
+            "subunit_to_unit": 100,
+            "symbol": "kr",
+            "symbol_first": 0,
+            "thousands_separator": " "
+          },
+          "flag": "🇸🇪",
+          "geohash": "u6282tw44n6htp4hur5y",
+          "qibla": 139.05,
+          "roadinfo": {
+            "drive_on": "right",
+            "road": "unnamed road",
+            "road_type": "motorway",
+            "speed_in": "km/h"
+          },
+          "sun": {
+            "rise": {
+              "apparent": 1646804760,
+              "astronomical": 1646796960,
+              "civil": 1646802420,
+              "nautical": 1646799720
+            },
+            "set": {
+              "apparent": 1646845200,
+              "astronomical": 1646853060,
+              "civil": 1646847540,
+              "nautical": 1646850240
+            }
+          },
+          "timezone": {
+            "name": "Europe/Stockholm",
+            "now_in_dst": 0,
+            "offset_sec": 3600,
+            "offset_string": "+0100",
+            "short_name": "CET"
+          },
+          "what3words": {
+            "words": "loads.dirt.bronzed"
+          }
+        },
+        "bounds": {
+          "northeast": {
+            "lat": 57.7308044,
+            "lng": 11.9834368
+          },
+          "southwest": {
+            "lat": 57.7307498,
+            "lng": 11.9834062
+          }
+        },
+        "components": {
+          "ISO_3166-1_alpha-2": "SE",
+          "ISO_3166-1_alpha-3": "SWE",
+          "_category": "road",
+          "_type": "road",
+          "city": "Gothenburg",
+          "city_district": "Hisingen",
+          "continent": "Europe",
+          "country": "Sweden",
+          "country_code": "se",
+          "county": "Västra Götaland County",
+          "municipality": "Göteborgs Stad",
+          "political_union": "European Union",
+          "postcode": "422 44",
+          "road": "unnamed road",
+          "road_type": "motorway",
+          "suburb": "Brunnsbo"
+        },
+        "confidence": 9,
+        "formatted": "unnamed road, 422 44 Gothenburg, Sweden",
+        "geometry": {
+          "lat": 57.7307854,
+          "lng": 11.9834261
+        }
+      }
+    ],
+    "status": {
+      "code": 200,
+      "message": "OK"
+    },
+    "stay_informed": {
+      "blog": "https://blog.opencagedata.com",
+      "twitter": "https://twitter.com/OpenCage"
+    },
+    "thanks": "For using an OpenCage API",
+    "timestamp": {
+      "created_http": "Wed, 09 Mar 2022 06:25:32 GMT",
+      "created_unix": 1646807132
+    },
+    "total_results": 1
+  }
