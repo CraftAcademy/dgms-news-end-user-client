@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +24,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('fillInCPaymentFormField', (element, value) => {
+  cy.get(`div[data-cy=${element}]`).within(() => {
+    cy.get('iframe[name^="__privateStripeFrame"]').then((iframe) => {
+      const body = iframe.contents().find("body");
+      cy.wrap(body).find(`[name="${element}"]`).type(value, { delay: 2 });
+    });
+  });
+})
