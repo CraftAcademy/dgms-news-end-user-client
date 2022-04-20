@@ -27,8 +27,9 @@ const Articles = () => {
 
   const articleList = displayArticles(articles).map((article) => {
     return (
-      <Card>
-        <li key={article.id} style={{ listStyleType: "none" }}>
+      
+        <div key={article.id} style={{ listStyleType: "none" }}>
+          <Card>
           <Link to={`/article/${article.id}`}>
             <div data-cy="head-lines">
               <h2>{article.title}</h2>{" "}
@@ -40,8 +41,9 @@ const Articles = () => {
               style={{ height: 200 + "px", width: "auto" }}
             />
           </Link>
-        </li>
-      </Card>
+          </Card>
+        </div>
+      
     );
   });
   return (
