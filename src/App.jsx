@@ -1,16 +1,15 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Articles from './Components/Articles.jsx'
-import Article from './Components/Article.jsx'
-import NavBar from './Components/NavBar.jsx'
-import ArticleGroup from './Components/ArticleGroup.jsx'
-import Footer from './Components/Footer.jsx'
-import Login from './Components/Login.jsx'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Articles from "./Components/Articles.jsx";
+import Article from "./Components/Article.jsx";
+import NavBar from "./Components/NavBar.jsx";
+import ArticleGroup from "./Components/ArticleGroup.jsx";
+import Footer from "./Components/Footer.jsx";
+import Login from "./Components/Login.jsx";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
-
   return (
     <>
       <NavBar />
@@ -18,11 +17,12 @@ const App = () => {
         <Route path="/" element={<Articles />} />
         <Route path="/article/:id" element={<Article toast={toast} />} />
         <Route path="/:category" element={<ArticleGroup />} />
-        <Route path="/login" element={<Login toast={toast}/>} />
+        <Route path="/login" element={<Login toast={toast} />} />
       </Routes>
+
       <div
         style={{
-          position: 'fixed',
+          position: "fixed",
           left: 0,
           bottom: 0,
           right: 0,
@@ -44,6 +44,6 @@ const App = () => {
         />
       </div>
     </>
-  )
-}
-export default App
+  );
+};
+export default App;
