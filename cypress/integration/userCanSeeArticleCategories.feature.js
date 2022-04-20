@@ -46,7 +46,7 @@ describe('visitor can switch to business news category tab', () => {
       .first()
       .within(() => {
         cy.get('[data-cy=article-title]')
-          .should('contain.text', 'Business 1')
+          .should('contain.text', 'Business 2')
           .and('be.visible')
       })
   })

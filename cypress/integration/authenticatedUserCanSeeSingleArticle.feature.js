@@ -16,9 +16,9 @@ describe("Visitor  can ", () => {
       cy.get("[data-cy=head-lines]").first().click();
     });
 
-    it("is expected to not display the sign in button for an authenticated user", () => {
-      cy.get("[data-cy=login-button]").should("not.exist");
-    });
+     it("is expected to not display the sign in button for an authenticated user", () => {
+       cy.get("[data-cy=login-button]").should("not.be.visible");
+     });
 
     it("is expected to display that the user is logged in", () => {
       cy.get("[data-cy=logged-button]").should("be.visible");
