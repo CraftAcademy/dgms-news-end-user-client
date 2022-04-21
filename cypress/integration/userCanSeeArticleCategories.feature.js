@@ -4,7 +4,23 @@ describe("Visitor can switch to sport news category tab", () => {
       fixture: "articles.json",
     }).as("getArticles");
 
-    cy.visit("/");
+    cy.visit("/", {
+      onBeforeLoad(window) {
+        const stubLocation = {
+          coords: {
+            latitude: 57.7308044,
+            longitude: 11.9834368,
+          },
+        };
+        cy.stub(window.navigator.geolocation, "getCurrentPosition").callsFake(
+          (callback) => {
+            return callback(stubLocation);
+          }
+        );
+      },
+    });
+
+    
   });
 
   it("is expected to make a GET request to the API", () => {
@@ -46,7 +62,7 @@ describe('visitor can switch to business news category tab', () => {
       .first()
       .within(() => {
         cy.get('[data-cy=article-title]')
-          .should('contain.text', 'Business 1')
+          .should('contain.text', 'Business 2')
           .and('be.visible')
       })
   })

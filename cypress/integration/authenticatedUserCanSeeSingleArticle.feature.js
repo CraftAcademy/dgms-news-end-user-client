@@ -1,11 +1,30 @@
-/* eslint-disable no-undef */
 describe("Visitor  can ", () => {
   describe("see a full single article when authenticated", () => {
     beforeEach(() => {
       cy.intercept("GET", "api/articles", {
         fixture: "articles.json",
       }).as("getArticles");
-      cy.visit("/");
+
+
+      cy.visit("/", {
+        onBeforeLoad(window) {
+          const stubLocation = {
+            coords: {
+              latitude: 57.7308044,
+              longitude: 11.9834368,
+            },
+          };
+          cy.stub(window.navigator.geolocation, "getCurrentPosition").callsFake(
+            (callback) => {
+              return callback(stubLocation);
+            }
+          );
+        },
+      });
+
+
+
+
       cy.window().its("store").invoke("dispatch", {
         type: "SET_USER_AUTHENTICATED",
         payload: true,
@@ -16,9 +35,9 @@ describe("Visitor  can ", () => {
       cy.get("[data-cy=head-lines]").first().click();
     });
 
-    it("is expected to not display the sign in button for an authenticated user", () => {
-      cy.get("[data-cy=login-button]").should("not.exist");
-    });
+     it("is expected to not display the sign in button for an authenticated user", () => {
+       cy.get("[data-cy=login-button]").should("not.exist");
+     });
 
     it("is expected to display that the user is logged in", () => {
       cy.get("[data-cy=logged-button]").should("be.visible");
@@ -49,7 +68,22 @@ describe("Visitor  can ", () => {
         fixture: "articleShow.json",
       }).as("getSingleArticle");
 
-      cy.visit("/");
+      cy.visit("/", {
+        onBeforeLoad(window) {
+          const stubLocation = {
+            coords: {
+              latitude: 57.7308044,
+              longitude: 11.9834368,
+            },
+          };
+          cy.stub(window.navigator.geolocation, "getCurrentPosition").callsFake(
+            (callback) => {
+              return callback(stubLocation);
+            }
+          );
+        },
+      });
+
 
       cy.get("[data-cy=head-lines]").first().click();
     });

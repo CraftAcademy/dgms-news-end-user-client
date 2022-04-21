@@ -3,7 +3,6 @@ import axios from "axios";
 import { Card, Container } from "semantic-ui-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import Login from "./Login";
 
 const Article = ({ toast }) => {
   let navigate = useNavigate();
