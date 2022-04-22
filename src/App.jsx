@@ -10,16 +10,16 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const App = () => {
-
   return (
     <>
       <NavBar />
       <Routes>
         <Route path="/" element={<Articles />} />
-        <Route path="/article/:id" element={<Article toast={toast} />} />
+        <Route path="/article/:id" element={<Article/>} />
         <Route path="/:category" element={<ArticleGroup />} />
-        <Route path="/login" element={<Login toast={toast}/>} />
+        <Route path="/login" element={<Login />} />
       </Routes>
+
       <div
         style={{
           position: 'fixed',

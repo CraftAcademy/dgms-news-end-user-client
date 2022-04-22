@@ -14,7 +14,17 @@ describe("visitor can see an single article by authenticating right away", () =>
     cy.intercept("GET", "api/auth/validate_token**", {
       fixture: "authenticationSuccess.json",
     });
-    cy.visit("/");
+    
+    cy.visit("/", {
+      onBeforeLoad(window) {
+        const response = { error: { PERMISSION_DENIED: true } };
+        cy.stub(window.navigator.geolocation, "getCurrentPosition").callsFake(
+          (callback) => {
+            return callback(response);
+          }
+        );
+      },
+    });
   });
   describe("visitor is able and required to authenticate", () => {
     it("is expected to display a sign in button", () => {

@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import auth from "../modules/auth";
 import { Button, Container, Form, Input } from "semantic-ui-react";
+import { toast } from "react-toastify";
 
-
-const Login = ({ toast }) => {
+const Login = () => {
   const dispatch = useDispatch();
   const { activeArticle } = useSelector((state) => state);
   let navigate = useNavigate();
@@ -36,9 +36,9 @@ const Login = ({ toast }) => {
           <Form.Field
             name="email"
             data-cy="login-email"
-            placeholder="Email"
+            placeholder="your@emails"
             control={Input}
-            label="emai"
+            label="Email"
           />
           <Form.Field
             name="password"
@@ -52,6 +52,7 @@ const Login = ({ toast }) => {
             data-cy="submit-button"
             content="Login"
             control={Button}
+            color="teal"
           />
         </Form>
       </Container>
