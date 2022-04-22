@@ -1,6 +1,7 @@
 const initialState = {
   articles: [],
-  userAuthenticated: false
-};
+  userAuthenticated: false,
+  userCountry: '',
+}
 
-export default initialState;
+export default initialState
