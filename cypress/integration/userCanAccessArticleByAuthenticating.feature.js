@@ -1,20 +1,21 @@
+/* eslint-disable no-undef */
 describe("visitor can see an single article by authenticating right away", () => {
   beforeEach(() => {
-    cy.intercept("GET", "api/articles", {
+    cy.intercept("GET", "**/api/articles", {
       fixture: "articles.json",
     }).as("getArticles");
-    cy.intercept("GET", "**/article/**", {
+    cy.intercept("GET", "**/articles/**", {
       fixture: "articleShow.json",
     }).as("getSingleArticle");
 
-    cy.intercept("POST", "api/auth/sign_in", {
+    cy.intercept("POST", "**/api/auth/sign_in", {
       fixture: "authenticationSuccess.json",
       headers: { uid: "user@email.com" },
     });
-    cy.intercept("GET", "api/auth/validate_token**", {
+    cy.intercept("GET", "**/api/auth/validate_token**", {
       fixture: "authenticationSuccess.json",
     });
-    
+
     cy.visit("/", {
       onBeforeLoad(window) {
         const response = { error: { PERMISSION_DENIED: true } };
@@ -54,23 +55,23 @@ describe("visitor can see an single article by authenticating right away", () =>
       cy.get("[data-cy=flash-message]").should(
         "contain.text",
         "Login successful"
-        );
-      });
+      );
     });
-    describe("By clicking an article and then logging in", () => {
-      beforeEach(() => {
-        cy.get("[data-cy=head-lines]").first().click();
-      });
-  
-      it("is expected to redirect visitor to login screen", () => {
-        cy.url().should("eq", "http://localhost:3000/login");
-      });
-  
-      it("is expected user to access full article after logging in", () => {
-        cy.get("[data-cy=login-email]").type("user@email.com");
-        cy.get("[data-cy=login-password]").type("password");
-        cy.get("[data-cy=submit-button]").click();
-        cy.url().should("eq", "http://localhost:3000/article/1");
-      });
+  });
+  describe("By clicking an article and then logging in", () => {
+    beforeEach(() => {
+      cy.get("[data-cy=head-lines]").first().click();
     });
+
+    it("is expected to redirect visitor to login screen", () => {
+      cy.url().should("eq", "http://localhost:3000/login");
+    });
+
+    it("is expected user to access full article after logging in", () => {
+      cy.get("[data-cy=login-email]").type("user@email.com");
+      cy.get("[data-cy=login-password]").type("password");
+      cy.get("[data-cy=submit-button]").click();
+      cy.url().should("eq", "http://localhost:3000/article/1");
+    });
+  });
 });
