@@ -14,7 +14,7 @@ const Article = () => {
   let article = activeArticle;
 
   const fetchArticle = async () => {
-    const response = await axios.get(`api/article/${id}`);
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/article/${id}`);
     dispatch({ type: "SET_ACTIVE_ARTICLE", payload: response.data.article });
   };
 

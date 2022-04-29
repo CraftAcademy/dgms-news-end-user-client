@@ -9,7 +9,7 @@ const Articles = () => {
   const { articles } = useSelector((state) => state);
 
   const fetchArticles = async () => {
-    const response = await axios.get("api/articles");
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/articles`);
     dispatch({ type: "SET_ARTICLES", payload: response.data.articles });
   };
 
