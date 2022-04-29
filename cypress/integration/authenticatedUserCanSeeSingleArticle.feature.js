@@ -1,11 +1,12 @@
 /* eslint-disable no-undef */
 describe("Visitor  can ", () => {
+  beforeEach(() => {
+    cy.intercept("GET", "**/api/articles", {
+      fixture: "articles.json",
+    }).as("getArticles");
+  });
   describe("see a full single article when authenticated", () => {
     beforeEach(() => {
-      cy.intercept("GET", "api/articles", {
-        fixture: "articles.json",
-      }).as("getArticles");
-
       cy.intercept("GET", "https://api.opencagedata.com/geocode/v1/json**", {
         fixture: "location.json",
       }).as("getLocation");
@@ -61,11 +62,7 @@ describe("Visitor  can ", () => {
 
   describe("cannot see an full article when unauthenticated", () => {
     beforeEach(() => {
-      cy.intercept("GET", "api/articles", {
-        fixture: "articles.json",
-      }).as("getArticles");
-
-      cy.intercept("GET", "**/article/**", {
+      cy.intercept("GET", "**/articles/**", {
         fixture: "articleShow.json",
       }).as("getSingleArticle");
 
